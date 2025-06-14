@@ -28,26 +28,26 @@ const Projects: React.FC = () => {
       description: 'A responsive e-commerce website with product listings, cart functionality, and checkout process.',
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       tags: ['HTML', 'CSS', 'JavaScript'],
-      demoLink: 'https://nst-sdc.github.io/NIRMAN-SUBMission-of-NST-ADYPU/websters/',
-      codeLink: '#'
+      demoLink: 'https://starlit-sundae-1c4a2a.netlify.app/',
+      codeLink: 'https://github.com/sanjana2505006/Elegance'
     },
     {
       id: 3,
-      title: 'ML Weather Prediction',
+      title: 'StopWatch',
       description: 'A machine learning model that predicts weather patterns based on historical data.',
       image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       tags: ['Python', 'Machine Learning', 'Data Analysis'],
-      demoLink: '#',
-      codeLink: '#'
+      demoLink: 'https://sanjana2505006.github.io/Stop-Watch/',
+      codeLink: 'https://github.com/sanjana2505006/Stop-Watch'
     },
     {
       id: 4,
-      title: 'Task Management App',
+      title: 'Calculator',
       description: 'A productivity application for managing daily tasks, projects, and deadlines.',
       image: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       tags: ['React', 'Redux', 'Firebase'],
-      demoLink: '#',
-      codeLink: '#'
+      demoLink: 'https://sanjana2505006.github.io/Calculator-/',
+      codeLink: 'https://github.com/sanjana2505006/Calculator-'
     }
   ]);
 
