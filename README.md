@@ -12,7 +12,7 @@ This is my **fully responsive and custom-built personal portfolio website**, des
 ---
 
 ## 🌐 Live Website
-👉 [Click here to visit my portfolio]([https://zesty-bombolone-da7c37.netlify.app/#contact](https://69340c9c0775ef478a47287e--sanjanaproject.netlify.app/))
+👉 [Click here to visit my portfolio](https://sanjanaproject.netlify.app/)
 
 ---
 
