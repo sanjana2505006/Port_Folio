@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
                       href={project.demoLink} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="p-2 bg-white rounded-full hover:bg-[var(--primary)] hover:text-white transition-colors"
+                      className="p-2 bg-white text-gray-900 rounded-full hover:bg-[var(--primary)] hover:text-white transition-colors"
                       aria-label={`View ${project.title} demo`}
                     >
                       <ExternalLink size={20} />
@@ -85,7 +85,7 @@ const Projects: React.FC = () => {
                       href={project.codeLink} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="p-2 bg-white rounded-full hover:bg-[var(--primary)] hover:text-white transition-colors"
+                      className="p-2 bg-white rounded-full hover:bg-[var(--primary)] text-gray-900 hover:text-white transition-colors"
                       aria-label={`View ${project.title} code`}
                     >
                       <Github size={20} />
