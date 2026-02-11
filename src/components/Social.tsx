@@ -58,55 +58,29 @@ const Social: React.FC = () => {
   return (
     <section id="social" className="section bg-gray-50 dark:bg-gray-900/50">
       <div className="container">
-        <h2 className="section-title pb-4">Connect With Me</h2>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-12">
+        <div className="relative mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Connect With Me</h2>
+          <div className="w-20 h-1 bg-[var(--primary)] rounded-full"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {socialLinks.map((link, index) => (
             <a
               key={link.id}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-fade-in"
-              style={{animationDelay: `${index * 0.1 + 0.1}s`}}
+              className="animate-fade-in group"
+              style={{ animationDelay: `${index * 0.1 + 0.1}s` }}
             >
-              <div className="card p-6 text-center h-full hover:scale-105 transition-transform">
-                <div className={`w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center text-white ${link.color}`}>
+              <div className="card p-4 flex items-center gap-4 hover:scale-105 transition-transform">
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white ${link.color} shrink-0`}>
                   {link.icon}
                 </div>
-                <h3 className="font-medium">{link.name}</h3>
+                <h3 className="font-medium text-lg Group-hover:text-[var(--primary)] transition-colors">{link.name}</h3>
               </div>
             </a>
           ))}
-        </div>
-        
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center mb-8">Latest Blog Posts</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3].map((item) => (
-              <a 
-                key={item}
-                href="https://substack.com/@sanjana847942"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card group overflow-hidden animate-fade-in"
-                style={{animationDelay: `${item * 0.1 + 0.5}s`}}
-              >
-                <div className="p-6">
-                  <h4 className="text-xl font-bold mb-2 group-hover:text-[var(--primary)] transition-colors">
-                    Blog Post Title #{item}
-                  </h4>
-                  <p className="text-[var(--muted)] mb-4">
-                    Published on {new Date().toLocaleDateString()}
-                  </p>
-                  <p className="line-clamp-3">
-                    This is a placeholder for blog post content. Click to read more on Substack.
-                  </p>
-                  <p className="mt-4 text-[var(--primary)] font-medium">Read more →</p>
-                </div>
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </section>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Trophy, Award, AlignCenterVertical as Certificate } from 'lucide-react';
+import { Trophy, Award, AlignCenterVertical as Certificate, Briefcase } from 'lucide-react';
 
 interface Achievement {
   id: number;
   title: string;
   date: string;
   description: string;
-  icon: 'trophy' | 'award' | 'certificate';
+  icon: 'trophy' | 'award' | 'certificate' | 'briefcase';
 }
 
 const Achievements: React.FC = () => {
@@ -15,7 +15,7 @@ const Achievements: React.FC = () => {
       id: 1,
       title: 'Nirmaan Hackathon',
       date: 'November 26, 2024',
-      description: 'Participated in and completed the Nirmaan Hackathon, developing innovative solutions.',
+      description: 'Won 1st place in the 6-hour NIRMAAN Hackathon by designing and developing a restaurant food delivery platform for hostel students and leading the team through development and presentation.',
       icon: 'trophy'
     },
     {
@@ -27,10 +27,10 @@ const Achievements: React.FC = () => {
     },
     {
       id: 3,
-      title: 'AI for Everyone Certification',
-      date: 'January 2024',
-      description: 'Completed the "AI for Everyone" course from Coursera, gaining foundational knowledge in artificial intelligence.',
-      icon: 'certificate'
+      title: 'Software Engineering Intern — NGO Mobile App',
+      date: 'April 2025',
+      description: 'Worked as a Software Engineering Intern, developing authentication and user profile features for an NGO mobile application and contributing to real-world software deployment.',
+      icon: 'briefcase'
     },
     {
       id: 4,
@@ -41,9 +41,9 @@ const Achievements: React.FC = () => {
     },
     {
       id: 5,
-      title: 'Startup Pitch Certification',
-      date: 'April 2024',
-      description: 'Completed the "Startup Pitch" program from Ajeenkya DY Patil University.',
+      title: 'A1 German Language Certification — Goethe Institute',
+      date: '2024',
+      description: 'Achieved A1 level German certification from Goethe Institute, Delhi.',
       icon: 'certificate'
     }
   ];
@@ -56,6 +56,8 @@ const Achievements: React.FC = () => {
         return <Award className="text-blue-500" size={24} />;
       case 'certificate':
         return <Certificate className="text-green-500" size={24} />;
+      case 'briefcase':
+        return <Briefcase className="text-purple-500" size={24} />;
       default:
         return <Trophy className="text-yellow-500" size={24} />;
     }
@@ -65,23 +67,25 @@ const Achievements: React.FC = () => {
     <section id="achievements" className="section">
       <div className="container">
         <h2 className="section-title pb-4">Achievements & Certifications</h2>
-        
-        <div className="mt-12 max-w-3xl mx-auto">
+
+        <div className="grid md:grid-cols-2 gap-8 mt-12">
           {achievements.map((achievement, index) => (
-            <div 
-              key={achievement.id} 
-              className="timeline-item animate-fade-in"
-              style={{animationDelay: `${index * 0.1 + 0.1}s`}}
+            <div
+              key={achievement.id}
+              className="animate-fade-in h-full"
+              style={{ animationDelay: `${index * 0.1 + 0.1}s` }}
             >
-              <div className="card p-6">
+              <div className="card p-6 h-full hover:border-[var(--primary)] transition-colors group">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-[var(--primary)]/10">
+                  <div className="p-3 rounded-xl bg-[var(--primary)]/10 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
                     {renderIcon(achievement.icon)}
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">{achievement.title}</h3>
-                    <p className="text-sm text-[var(--muted)] mb-3">{achievement.date}</p>
-                    <p className="text-[var(--text)]">{achievement.description}</p>
+                  <div className="flex-1">
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-xl font-bold">{achievement.title}</h3>
+                    </div>
+                    <p className="text-sm text-[var(--primary)] font-medium mb-3">{achievement.date}</p>
+                    <p className="text-[var(--text)] leading-relaxed">{achievement.description}</p>
                   </div>
                 </div>
               </div>

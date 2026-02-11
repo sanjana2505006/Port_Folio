@@ -1,0 +1,1 @@
+This is a placeholder for Sanjana's resume. Replace this file with your actual PDF resume (e.g., rename your PDF to resume.pdf and update the link in About.tsx).
