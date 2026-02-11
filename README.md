@@ -16,6 +16,13 @@ This is my **fully responsive and custom-built personal portfolio website**, des
 
 ---
 
+## How to run this 
+
+`npm install,
+npm run dev` 
+
+`npm run build`
+
 ## 📌 Sections Included
 - Home
 - About Me
