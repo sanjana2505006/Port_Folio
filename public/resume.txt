@@ -1,1 +1,48 @@
-This is a placeholder for Sanjana's resume. Replace this file with your actual PDF resume (e.g., rename your PDF to resume.pdf and update the link in About.tsx).
+SANJANA
+Software Engineering Student · Apache Committer · Former SDE (Mobile)
+Email: sanjana.k@adypu.edu.in | Phone: +91 8006257860
+LinkedIn: https://www.linkedin.com/in/sanjana250506/
+GitHub: https://github.com/sanjana2505006
+LeetCode: https://leetcode.com/u/sanju2505/
+
+EDUCATION
+B.Tech in Computer Science (AI & ML) — 3rd Year
+Newton School of Technology, Ajeenkya DY Patil University
+
+EXPERIENCE
+Open Source Contributor / Grails Committer — The Apache Software Foundation
+May 2026 – Present | Remote
+- Wrote official documentation for Grails 8 "Data Access with GORM"
+- Built integration-test pipelines with Testcontainers for PostgreSQL
+- Optimized Postgres searches with ILIKE for case-insensitive matching
+- Improved API validation so bad requests return proper errors instead of 500s
+- Refactored HQL query helpers to executeQuery calls
+
+Software Engineer — Kiran Foundation
+April 2025 – July 2025 | Remote
+- Developed login/registration, profile photo management, and authentication flows
+
+PROJECTS
+Open Source Contributor Dashboard (June 2025)
+React/TypeScript + Express/PostgreSQL. Syncs GitHub PRs/issues via REST/GraphQL + OAuth.
+AI-powered Issue Assistant using LLMs for summarization and triaging.
+https://github.com/sanjana2505006/Open-Source-Contribution-Tracker
+
+Grocery Delivery App — QuickKart (November 2025)
+React Native + Expo, React Navigation, AsyncStorage. Blinkit-style local grocery delivery.
+https://github.com/sanjana2505006/QuickKart-Local-Grocery-Delivery-App
+
+ScreenTime Recorder (June 2025)
+React + D3.js + Tailwind. Tracks and visualizes screen time with real-time charts.
+https://github.com/sanjana2505006/Screentime-recoder
+
+ACHIEVEMENTS
+- Hyperlume Game Jam — 1st Place (Feb 2025), Newton School of Technology
+- NIRMAAN Hackathon — 1st Place (Nov 2024), led team; restaurant delivery site in 6 hours
+- Smart India Hackathon 2025 (Software Category)
+
+SKILLS
+Languages: JavaScript, TypeScript, Python, SQL, Go, Java, UI/UX
+Frameworks: React, React Native, Node.js, Express, Prisma ORM, D3.js, Pandas
+Databases: MySQL, PostgreSQL
+Tools: Git, GitHub, GitHub Actions

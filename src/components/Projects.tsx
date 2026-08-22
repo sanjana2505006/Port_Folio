@@ -15,44 +15,41 @@ const Projects: React.FC = () => {
   const [projects] = useState<Project[]>([
     {
       id: 1,
-      title: 'AI Image Generator',
-      description: 'A web application that uses AI to generate and search for images based on text descriptions.',
-      image: 'https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      tags: ['React', 'AI', 'API Integration'],
-      demoLink: 'https://sanjana2505006.github.io/Image-search/',
-      codeLink: 'https://github.com/sanjana2505006/Image-search'
+      title: 'Open Source Contributor Dashboard',
+      description:
+        'Full-stack dashboard that syncs GitHub PRs and issues across repos via REST/GraphQL + OAuth. Includes an AI Issue Assistant that summarizes and triages with LLMs.',
+      image:
+        'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      tags: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'LLMs'],
+      demoLink: 'https://github.com/sanjana2505006/Open-Source-Contribution-Tracker',
+      codeLink: 'https://github.com/sanjana2505006/Open-Source-Contribution-Tracker',
     },
     {
       id: 2,
-      title: 'Screentime Recorder',
-      description: 'A web application that tracks and records screen usage, helping users monitor time spent on different activities and improve productivity.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      tags: ['HTML', 'CSS', 'JavaScript'],
-      demoLink: 'https://screentime-recoder.vercel.app/',
-      codeLink: 'https://github.com/nst-sdc/Screentime-recoder'
+      title: 'QuickKart — Grocery Delivery',
+      description:
+        'Blinkit-style local grocery delivery app built with React Native + Expo. Cart, checkout, and local persistence with AsyncStorage and React Navigation.',
+      image:
+        'https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      tags: ['React Native', 'Expo', 'AsyncStorage'],
+      demoLink: 'https://github.com/sanjana2505006/QuickKart-Local-Grocery-Delivery-App',
+      codeLink: 'https://github.com/sanjana2505006/QuickKart-Local-Grocery-Delivery-App',
     },
     {
       id: 3,
-      title: 'StopWatch',
-      description: 'A machine learning model that predicts weather patterns based on historical data.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      tags: ['Python', 'Machine Learning', 'Data Analysis'],
-      demoLink: 'https://sanjana2505006.github.io/Stop-Watch/',
-      codeLink: 'https://github.com/sanjana2505006/Stop-Watch'
+      title: 'ScreenTime Recorder',
+      description:
+        'Web app that tracks and visualizes screen time with React and D3.js. Real-time charts and a responsive Tailwind UI for productivity insights.',
+      image:
+        'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      tags: ['React', 'D3.js', 'Tailwind CSS'],
+      demoLink: 'https://screentime-recoder.vercel.app/',
+      codeLink: 'https://github.com/sanjana2505006/Screentime-recoder',
     },
-    {
-      id: 4,
-      title: 'Calculator',
-      description: 'A productivity application for managing daily tasks, projects, and deadlines.',
-      image: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      tags: ['React', 'Redux', 'Firebase'],
-      demoLink: 'https://sanjana2505006.github.io/Calculator-/',
-      codeLink: 'https://github.com/sanjana2505006/Calculator-'
-    }
   ]);
 
   return (
-    <section id="projects" className="section bg-gray-50 dark:bg-gray-900/50">
+    <section id="projects" className="section bg-gray-50/70 dark:bg-gray-900/40 relative">
       <div className="container">
         <h2 className="section-title pb-4">Projects</h2>
 
@@ -67,9 +64,9 @@ const Projects: React.FC = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <div className="flex justify-center space-x-4">
                     <a
@@ -96,11 +93,13 @@ const Projects: React.FC = () => {
 
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-[var(--muted)] mb-4">{project.description}</p>
+                <p className="text-[var(--muted)] mb-4 text-sm leading-relaxed">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, idx) => (
+                  {project.tags.map((tag) => (
                     <span
-                      key={idx}
+                      key={tag}
                       className="px-3 py-1 text-xs font-medium bg-[var(--primary)]/10 text-[var(--primary)] rounded-full"
                     >
                       {tag}

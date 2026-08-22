@@ -8,6 +8,7 @@ import Achievements from './components/Achievements';
 import Social from './components/Social';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import GlobalBackground from './components/GlobalBackground';
 import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
@@ -19,9 +20,8 @@ function App() {
       const scrollPosition = window.scrollY;
       setScrolled(scrollPosition > 50);
 
-      // Determine active section based on scroll position
       const sections = ['home', 'about', 'skills', 'projects', 'achievements', 'social', 'contact'];
-      
+
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);
         if (element && scrollPosition >= element.offsetTop - 200) {
@@ -37,9 +37,10 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col relative">
+        <GlobalBackground />
         <Navbar scrolled={scrolled} activeSection={activeSection} />
-        <main className="flex-grow">
+        <main className="flex-grow relative z-10">
           <Hero />
           <About />
           <Skills />

@@ -56,7 +56,7 @@ const Social: React.FC = () => {
   ];
 
   return (
-    <section id="social" className="section bg-gray-50 dark:bg-gray-900/50">
+    <section id="social" className="section bg-gray-50/70 dark:bg-gray-900/40 relative">
       <div className="container">
         <div className="relative mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Connect With Me</h2>
@@ -77,7 +77,7 @@ const Social: React.FC = () => {
                 <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white ${link.color} shrink-0`}>
                   {link.icon}
                 </div>
-                <h3 className="font-medium text-lg Group-hover:text-[var(--primary)] transition-colors">{link.name}</h3>
+                <h3 className="font-medium text-lg group-hover:text-[var(--primary)] transition-colors">{link.name}</h3>
               </div>
             </a>
           ))}

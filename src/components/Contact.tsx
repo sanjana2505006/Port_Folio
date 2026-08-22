@@ -55,8 +55,8 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Email</h4>
-                  <a href="mailto:sanjana.work250@gmail.com" className="text-[var(--primary)] hover:underline">
-                    sanjana.work250@gmail.com
+                  <a href="mailto:sanjana.k@adypu.edu.in" className="text-[var(--primary)] hover:underline">
+                    sanjana.k@adypu.edu.in
                   </a>
                 </div>
               </div>
@@ -66,8 +66,8 @@ const Contact: React.FC = () => {
                   <Phone className="text-[var(--primary)]" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-medium mb-1">Location</h4>
-                  <p>Newton School of Technology</p>
+                  <h4 className="font-medium mb-1">School</h4>
+                  <p>Newton School of Technology · ADYPU</p>
                 </div>
               </div>
             </div>

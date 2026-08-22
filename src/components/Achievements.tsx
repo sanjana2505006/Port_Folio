@@ -13,84 +13,110 @@ const Achievements: React.FC = () => {
   const achievements: Achievement[] = [
     {
       id: 1,
-      title: 'Nirmaan Hackathon',
-      date: 'November 26, 2024',
-      description: 'Won 1st place in the 6-hour NIRMAAN Hackathon by designing and developing a restaurant food delivery platform for hostel students and leading the team through development and presentation.',
-      icon: 'trophy'
+      title: 'SDE — Apache Software Foundation',
+      date: 'May 2026 – Present',
+      description:
+        'Software engineer at Apache working on Grails — documentation, Testcontainers + Postgres pipelines, search optimization, and API validation.',
+      icon: 'briefcase',
     },
     {
       id: 2,
-      title: 'Game Development Competition - First Prize',
-      date: 'March 1, 2025',
-      description: 'Developed a fun and addictive offline game inspired by the classic T-Rex runner, where players navigate through obstacles in a never-ending desert adventure.',
-      icon: 'trophy'
+      title: 'Apache Grails Committer',
+      date: 'May 2026 – Present',
+      description:
+        'Apache Committer on the Grails project. Writing official Grails 8 Data Access with GORM docs and shipping contributions to the codebase.',
+      icon: 'award',
     },
     {
       id: 3,
-      title: 'Software Engineering Intern — NGO Mobile App',
-      date: 'April 2025',
-      description: 'Worked as a Software Engineering Intern, developing authentication and user profile features for an NGO mobile application and contributing to real-world software deployment.',
-      icon: 'briefcase'
+      title: 'Software Engineer — Kiran Foundation',
+      date: 'April 2025 – July 2025',
+      description:
+        'Built core mobile app features: login/registration, profile photo management, and authentication flows for a production NGO application.',
+      icon: 'briefcase',
     },
     {
       id: 4,
-      title: 'Unity Basics Certification',
-      date: 'February 2024',
-      description: 'Completed the "Unity Basics" course from Udemy, learning game development fundamentals.',
-      icon: 'certificate'
+      title: 'Hyperlume Game Jam — 1st Place',
+      date: 'February 2025',
+      description:
+        'Won 1st place at Newton School of Technology. Built a playable game from scratch, reviewed by the CEO of GameEon Studios.',
+      icon: 'trophy',
     },
     {
       id: 5,
-      title: 'A1 German Language Certification — Goethe Institute',
-      date: '2024',
-      description: 'Achieved A1 level German certification from Goethe Institute, Delhi.',
-      icon: 'certificate'
-    }
+      title: 'NIRMAAN Hackathon — 1st Place',
+      date: 'November 2024',
+      description:
+        'Led a team to design and ship a restaurant food delivery site for hostel students in a 6-hour hackathon.',
+      icon: 'trophy',
+    },
   ];
 
   const renderIcon = (iconType: string) => {
     switch (iconType) {
       case 'trophy':
-        return <Trophy className="text-yellow-500" size={24} />;
+        return <Trophy size={22} />;
       case 'award':
-        return <Award className="text-blue-500" size={24} />;
+        return <Award size={22} />;
       case 'certificate':
-        return <Certificate className="text-green-500" size={24} />;
+        return <Certificate size={22} />;
       case 'briefcase':
-        return <Briefcase className="text-purple-500" size={24} />;
+        return <Briefcase size={22} />;
       default:
-        return <Trophy className="text-yellow-500" size={24} />;
+        return <Trophy size={22} />;
     }
   };
 
   return (
-    <section id="achievements" className="section">
-      <div className="container">
-        <h2 className="section-title pb-4">Achievements & Certifications</h2>
+    <section id="achievements" className="section relative overflow-hidden">
+      <div className="absolute right-0 top-1/4 w-80 h-80 rounded-full bg-[var(--secondary)]/5 blur-3xl pointer-events-none" />
 
-        <div className="grid md:grid-cols-2 gap-8 mt-12">
-          {achievements.map((achievement, index) => (
-            <div
-              key={achievement.id}
-              className="animate-fade-in h-full"
-              style={{ animationDelay: `${index * 0.1 + 0.1}s` }}
-            >
-              <div className="card p-6 h-full hover:border-[var(--primary)] transition-colors group">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-[var(--primary)]/10 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
-                    {renderIcon(achievement.icon)}
+      <div className="container relative">
+        <h2 className="section-title pb-4">Experience &amp; Achievements</h2>
+
+        <div className="relative mt-12 max-w-3xl mx-auto">
+          {/* Timeline line */}
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--primary)] via-[var(--secondary)] to-transparent md:-translate-x-1/2" />
+
+          <div className="space-y-8">
+            {achievements.map((achievement, index) => {
+              const isLeft = index % 2 === 0;
+              return (
+                <div
+                  key={achievement.id}
+                  className={`relative animate-fade-in flex md:items-center ${
+                    isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
+                  style={{ animationDelay: `${index * 0.1 + 0.1}s` }}
+                >
+                  {/* Node */}
+                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 flex items-center justify-center">
+                    <span className="w-4 h-4 rounded-full bg-[var(--primary)] ring-4 ring-[var(--primary)]/20 timeline-pulse" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-xl font-bold">{achievement.title}</h3>
+
+                  <div className={`w-full md:w-[calc(50%-2rem)] pl-16 md:pl-0 ${isLeft ? 'md:pr-8' : 'md:pl-8'}`}>
+                    <div className="card p-5 hover:border-[var(--primary)] transition-all group hover:shadow-lg">
+                      <div className="flex items-start gap-3">
+                        <div className="p-2.5 rounded-xl bg-[var(--primary)]/10 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors shrink-0">
+                          {renderIcon(achievement.icon)}
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold leading-snug">{achievement.title}</h3>
+                          <p className="text-sm text-[var(--primary)] font-medium mt-1 mb-2">
+                            {achievement.date}
+                          </p>
+                          <p className="text-sm text-[var(--muted)] leading-relaxed">
+                            {achievement.description}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-sm text-[var(--primary)] font-medium mb-3">{achievement.date}</p>
-                    <p className="text-[var(--text)] leading-relaxed">{achievement.description}</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

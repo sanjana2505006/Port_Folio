@@ -13,12 +13,12 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="py-8 bg-gray-100 dark:bg-gray-900">
+    <footer className="py-8 bg-gray-100/80 dark:bg-gray-900/80 relative z-10 backdrop-blur-sm">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h2 className="text-xl font-bold text-[var(--primary)]">Sanjana</h2>
-            <p className="text-[var(--muted)]">B.Tech Student in CSE (AI & ML)</p>
+            <p className="text-[var(--muted)]">3rd Year · Apache Committer · CSE (AI &amp; ML)</p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-6">
